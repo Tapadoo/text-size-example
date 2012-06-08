@@ -1,0 +1,8 @@
+bin
+tests/bin
+gen
+tests/gen
+/local.properties
+.DS_Store
+tests/reports
+index.html

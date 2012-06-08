@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sv"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+        <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="Un spec" />
+        <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="10sp" android:textSize="10sp" />
+        <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="12sp" android:textSize="12sp" />
+        <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="14sp" android:textSize="14sp" />
+        <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="16sp" android:textSize="16sp" />
+        <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="18sp" android:textSize="18sp" />
+        <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="20sp" android:textSize="20sp" />
+        
+        
+        <TextView style="@style/demoBlockDp"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="10dp" android:textSize="10dp" />
+        <TextView style="@style/demoBlockDp"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="12dp" android:textSize="12dp" />
+        <TextView style="@style/demoBlockDp"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="14dp" android:textSize="14dp" />
+        <TextView style="@style/demoBlockDp"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="16dp" android:textSize="16dp" />
+        <TextView style="@style/demoBlockDp"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="18dp" android:textSize="18dp" />
+        <TextView style="@style/demoBlockDp"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="20dp" android:textSize="20dp" />
+        
+        <TextView style="@style/demoBlockPt"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="10pt" android:textSize="10pt" />
+        <TextView style="@style/demoBlockPt"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="12pt" android:textSize="12pt" />
+        <TextView style="@style/demoBlockPt"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="14pt" android:textSize="14pt" />
+        <TextView style="@style/demoBlockPt"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="16pt" android:textSize="16pt" />
+        <TextView style="@style/demoBlockPt"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="18pt" android:textSize="18pt" />
+        <TextView style="@style/demoBlockPt"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="20pt" android:textSize="20pt" />
+        
+        <TextView  style="@style/demoBlockSize" android:layout_width="100dp" android:layout_height="48dp"  android:text="width 100dp"/>
+        <TextView  style="@style/demoBlockSize" android:layout_width="100px" android:layout_height="48dp"  android:text="width 100px"/>
+        
+        <TextView  style="@style/demoBlockSize" android:layout_width="200dp" android:layout_height="48dp" android:text="width 200dp"/>
+        <TextView  style="@style/demoBlockSize" android:layout_width="200px" android:layout_height="48dp" android:text="width 200px"/>
+        
+        <TextView  style="@style/demoBlockSize" android:layout_width="300dp" android:layout_height="48dp" android:text="width 300dp"/>
+        <TextView  style="@style/demoBlockSize" android:layout_width="300px" android:layout_height="48dp" android:text="width 300px"/>
+        
+        <TextView  style="@style/demoBlockSize" android:layout_width="320dp" android:layout_height="48dp" android:text="width 320dp"/>
+        <TextView  style="@style/demoBlockSize" android:layout_width="320px" android:layout_height="48dp" android:text="width 320px"/>
+        <TextView android:id="@+id/mpText" style="@style/demoBlockSize" android:layout_width="match_parent" android:layout_height="48dp" android:text="match_parent"/>
+        
+    </LinearLayout>
+</ScrollView>
