@@ -9,7 +9,6 @@ import android.view.View.OnLayoutChangeListener;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
-import android.widget.TableLayout.LayoutParams;
 import android.widget.TextView;
 
 public class TextSizingExampleActivity extends Activity {
