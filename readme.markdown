@@ -4,5 +4,9 @@ Quick android app to show off the effects of sizing text at different dp, sp , a
 
 Also nice for running size by side on different screen resolutions to get a feel for how similar or different measurements will feel on different size devices.
 
-![Pixel comparsion - xhdpi,hdpi,mdpi](https://dl.dropbox.com/u/2300280/device-comp.png)
-![Real life comparsion - xhdpi and hdpi](https://dl.dropbox.com/u/2300280/size_ex_1.jpg)
+there are some static and interactive controls to show how the platform does things.
+
+![Pixel comparsion - xhdpi,hdpi,mdpi](http://tapadoo.github.com/text-size-example/images//device-comp.png)
+![Real life comparsion - xhdpi and hdpi](http://tapadoo.github.com/text-size-example/images//size_ex_1.jpg)
+
+as seen on [the tapadoo blog](http://tapadoo.com/2012/android-scaling-quick-example)
