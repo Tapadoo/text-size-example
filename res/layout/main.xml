@@ -3,11 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sv"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent" >
     <LinearLayout android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:paddingBottom="80dp"
         >
+        
+        <TextView  android:layout_width="wrap_content" android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:text="Static" android:textAppearance="?android:attr/textAppearanceLarge"/>
+        
         <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="Un spec" />
         <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="10sp" android:textSize="10sp" />
         <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="12sp" android:textSize="12sp" />
@@ -43,6 +47,31 @@
         <TextView  style="@style/demoBlockSize" android:layout_width="320dp" android:layout_height="48dp" android:text="width 320dp"/>
         <TextView  style="@style/demoBlockSize" android:layout_width="320px" android:layout_height="48dp" android:text="width 320px"/>
         <TextView android:id="@+id/mpText" style="@style/demoBlockSize" android:layout_width="match_parent" android:layout_height="48dp" android:text="match_parent"/>
+        <TextView  android:layout_width="wrap_content" android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:text="Interactive" android:textAppearance="?android:attr/textAppearanceLarge"/>
+        
+        <LinearLayout
+            android:id="@+id/llCustomWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/tvCustom"  style="@style/demoBlock" android:layout_width="match_parent" android:layout_height="48dp" android:textSize="10sp"  android:text="10 sp"/>
+            <SeekBar android:id="@+id/sbAdjustCustom" android:layout_width="match_parent" android:progress="10" android:max="80" android:layout_gravity="center" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Adjust the slider to change the text size"/>
+        
+                <LinearLayout
+            android:id="@+id/llCustomSizeWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:orientation="vertical">
+            <TextView android:id="@+id/tvCustomSize"  style="@style/demoBlock" android:layout_width="20dp" android:layout_height="20dp" android:textSize="10sp"  android:text="20 dp"/>
+            <TextView android:id="@+id/tvCustomSizePx"  style="@style/demoBlock" android:layout_width="20px" android:layout_height="20px" android:textSize="10sp"  android:text="20 px"/>
+            
+            <SeekBar android:id="@+id/sbAdjustCustomSizeDp" android:layout_width="match_parent" android:progress="10" android:max="400" android:layout_gravity="center" android:layout_height="wrap_content"/>
+            <SeekBar android:id="@+id/sbAdjustCustomSizePx" android:layout_width="match_parent" android:progress="10" android:max="400" android:layout_gravity="center" android:layout_height="wrap_content"/>
+            
+        </LinearLayout>
+        <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Adjust the sliders to change the box sizes"/>
+        
         
     </LinearLayout>
 </ScrollView>
