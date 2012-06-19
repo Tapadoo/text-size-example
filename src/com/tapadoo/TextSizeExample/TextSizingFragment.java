@@ -16,19 +16,16 @@ import android.widget.TextView;
 public class TextSizingFragment extends Fragment {
 	
     private TextView tvCustom;
-    private TextView tvCustomSize;
-    private TextView tvCustomSizePx;
+
 
     private LinearLayout llCustomWrapper;
-	private LinearLayout llCustomWrapperSize;
-	
-	
+
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 
-		return inflater.inflate(R.layout.main, container , false);
+		return inflater.inflate(R.layout.frag_text_sizes, container , false);
 	}
 
 
@@ -41,11 +38,8 @@ public class TextSizingFragment extends Fragment {
         View view = getView();
         
         llCustomWrapper = (LinearLayout)view.findViewById(R.id.llCustomWrapper);
-        llCustomWrapperSize = (LinearLayout)view.findViewById(R.id.llCustomSizeWrapper);
         
         tvCustom = (TextView) view.findViewById(R.id.tvCustom);
-        tvCustomSize = (TextView) view.findViewById(R.id.tvCustomSize);
-        tvCustomSizePx = (TextView) view.findViewById(R.id.tvCustomSizePx);
         
         final TextView mpText = (TextView) view.findViewById(R.id.mpText);
         
@@ -64,8 +58,7 @@ public class TextSizingFragment extends Fragment {
 		});
         
         SeekBar sbAdjustCustom = (SeekBar) view.findViewById(R.id.sbAdjustCustom);
-        SeekBar sbAdjustCustomSizeDp = (SeekBar) view.findViewById(R.id.sbAdjustCustomSizeDp);
-        SeekBar sbAdjustCustomSizePx = (SeekBar) view.findViewById(R.id.sbAdjustCustomSizePx);
+
         
         sbAdjustCustom.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 			
@@ -102,97 +95,6 @@ public class TextSizingFragment extends Fragment {
 				llCustomWrapper.addView(tvCustom,0);
 				 llCustomWrapper.requestLayout();
 				tvCustom.postInvalidate();
-			}
-		});
-        
-        sbAdjustCustomSizeDp.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
-			
-			@Override
-			public void onStopTrackingTouch(SeekBar seekBar) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void onStartTrackingTouch(SeekBar seekBar) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void onProgressChanged(SeekBar seekBar, int progress,
-					boolean fromUser) {
-				
-				DisplayMetrics metrics = new DisplayMetrics();
-				getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
-
-				if( tvCustomSize != null )
-				{
-					llCustomWrapperSize.removeView(tvCustomSize);
-				}
-
-				int newSize = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, progress, metrics) ;
-				
-				tvCustomSize = (TextView) getActivity().getLayoutInflater().inflate(R.layout.dyn_text_view_ex_size, llCustomWrapperSize, false );
-				llCustomWrapperSize.addView(tvCustomSize,0);
-				tvCustomSize.setHeight(newSize);
-				tvCustomSize.setWidth(newSize);
-				
-
-				LinearLayout.LayoutParams lp = (android.widget.LinearLayout.LayoutParams) tvCustomSize.getLayoutParams();
-				lp.width = newSize;
-				lp.height = newSize;
-				tvCustomSize.setLayoutParams(lp);
-				
-				
-				
-				tvCustomSize.setText(progress + " dp");
-				
-				 llCustomWrapperSize.requestLayout();
-				 tvCustomSize.postInvalidate();
-			}
-		});
-        
-        sbAdjustCustomSizePx.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
-			
-			@Override
-			public void onStopTrackingTouch(SeekBar seekBar) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void onStartTrackingTouch(SeekBar seekBar) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void onProgressChanged(SeekBar seekBar, int progress,
-					boolean fromUser) {
-				
-				DisplayMetrics metrics = new DisplayMetrics();
-				getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
-
-				if( tvCustomSizePx != null )
-				{
-					llCustomWrapperSize.removeView(tvCustomSizePx);
-				}
-				
-				tvCustomSizePx = (TextView)  getActivity().getLayoutInflater().inflate(R.layout.dyn_text_view_ex_size, llCustomWrapperSize, false );
-				llCustomWrapperSize.addView(tvCustomSizePx,1);
-				tvCustomSizePx.setHeight(progress);
-				tvCustomSizePx.setWidth(progress);
-				
-				LinearLayout.LayoutParams lp = (android.widget.LinearLayout.LayoutParams) tvCustomSizePx.getLayoutParams();
-				lp.width = progress;
-				lp.height = progress;
-				tvCustomSizePx.setLayoutParams(lp);
-				
-				tvCustomSizePx.setText(progress + " px" );
-				
-				 llCustomWrapperSize.requestLayout();
-				 tvCustomSizePx.postInvalidate();
 			}
 		});
         

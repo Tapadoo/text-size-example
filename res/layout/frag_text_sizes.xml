@@ -58,20 +58,7 @@
         </LinearLayout>
         <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Adjust the slider to change the text size"/>
         
-                <LinearLayout
-            android:id="@+id/llCustomSizeWrapper"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" 
-            android:orientation="vertical">
-            <TextView android:id="@+id/tvCustomSize"  style="@style/demoBlock" android:layout_width="20dp" android:layout_height="20dp" android:textSize="10sp"  android:text="20 dp"/>
-            <TextView android:id="@+id/tvCustomSizePx"  style="@style/demoBlock" android:layout_width="20px" android:layout_height="20px" android:textSize="10sp"  android:text="20 px"/>
-            
-            <SeekBar android:id="@+id/sbAdjustCustomSizeDp" android:layout_width="match_parent" android:progress="10" android:max="400" android:layout_gravity="center" android:layout_height="wrap_content"/>
-            <SeekBar android:id="@+id/sbAdjustCustomSizePx" android:layout_width="match_parent" android:progress="10" android:max="400" android:layout_gravity="center" android:layout_height="wrap_content"/>
-            
-        </LinearLayout>
-        <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Adjust the sliders to change the box sizes"/>
-        
+         
         
     </LinearLayout>
 </ScrollView>

@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.SpinnerAdapter;
 
-public class TextSizingExampleActivity extends Activity implements OnNavigationListener {
+public class MainActivity extends Activity implements OnNavigationListener {
 	
 
 	/** Called when the activity is first created. */
@@ -34,7 +34,7 @@ public class TextSizingExampleActivity extends Activity implements OnNavigationL
 		}
 		else if( itemPosition == 1)
 		{
-			ft.replace(android.R.id.content, TextSizingFragment.create() );
+			ft.replace(android.R.id.content, BoxSizingFragment.create() );
 		}
 		
 		ft.commit() ;

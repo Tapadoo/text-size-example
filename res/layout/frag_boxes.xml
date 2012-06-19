@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView   xmlns:android="http://schemas.android.com/apk/res/android"   
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+<LinearLayout
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content" >
+    
+         <LinearLayout
+            android:id="@+id/llCustomSizeWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:orientation="vertical">
+            <TextView android:id="@+id/tvCustomSize"  style="@style/demoBlock" android:layout_width="20dp" android:layout_height="20dp" android:textSize="10sp"  android:text="20 dp"/>
+            <TextView android:id="@+id/tvCustomSizePx"  style="@style/demoBlock" android:layout_width="20px" android:layout_height="20px" android:textSize="10sp"  android:text="20 px"/>
+            
+            
+            <TextView android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Size first box in dp" android:layout_marginLeft="10dp" android:layout_marginTop="3dp" android:textStyle="italic" />
+            
+            <SeekBar android:id="@+id/sbAdjustCustomSizeDp" android:layout_width="match_parent" android:progress="10" android:max="400" android:layout_gravity="center" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Size second box in px"  android:layout_marginLeft="10dp" android:layout_marginTop="3dp" android:textStyle="italic" />
+            <SeekBar android:id="@+id/sbAdjustCustomSizePx" android:layout_width="match_parent" android:progress="10" android:max="400" android:layout_gravity="center" android:layout_height="wrap_content"/>
+            
+        </LinearLayout>
+        <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Adjust the sliders to change the box sizes"/>
+        
+</LinearLayout>
+
+</ScrollView>

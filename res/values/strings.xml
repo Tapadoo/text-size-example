@@ -4,6 +4,6 @@
     
     <string-array name="nav_options">
         <item>Text Sizes</item>
-        <item>Box Playground</item>
+        <item>Box Sizes</item>
     </string-array>
 </resources>
