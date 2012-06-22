@@ -13,7 +13,7 @@
                 <TextView android:id="@+id/tvWrapperHeightActual" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:layout_weight="0" android:text="Actual Size : --dp" android:textColor="@android:color/white" android:textStyle="bold"/>
             </LinearLayout>
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView Layout Gravity"/>
-            <Spinner android:id="@+id/spTextViewGravity" android:layout_width="match_parent" android:layout_height="wrap_content" android:spinnerMode="dialog" />
+            <Spinner android:id="@+id/spTextViewGravity" android:layout_width="match_parent" android:layout_height="wrap_content"  />
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView Layout Margin"/>
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                 <SeekBar android:id="@+id/sbTvLayoutMargin" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:max="50"/>

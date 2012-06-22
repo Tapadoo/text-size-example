@@ -1,7 +1,9 @@
 package com.tapadoo.TextSizeExample;
 
 import android.app.Fragment;
+import android.content.IntentSender.SendIntentException;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -19,12 +21,14 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class BoxModelFragment extends Fragment implements OnSeekBarChangeListener, OnLayoutChangeListener {
+public class BoxModelFragment extends Fragment implements OnSeekBarChangeListener {
 	
 	public static BoxModelFragment create()
 	{
 		return new BoxModelFragment();
 	}
+	
+	private Handler handler = new Handler();
 
 	private TextView tvBoxSizeText;
 	private SeekBar sbTvLayoutMargin;
@@ -64,12 +68,28 @@ public class BoxModelFragment extends Fragment implements OnSeekBarChangeListene
 		
 		rlBoxSizeWrapper = (RelativeLayout) view.findViewById(R.id.rlBoxSizeWrapper);
 		
+		
 		sbTvLayoutMargin.setOnSeekBarChangeListener(this);
 		sbTvLayoutPadding.setOnSeekBarChangeListener(this);
 		sbTvHeight.setOnSeekBarChangeListener(this);
 		sbWrapperHeight.setOnSeekBarChangeListener(this);
 		
-		rlBoxSizeWrapper.addOnLayoutChangeListener(this);
+		rlBoxSizeWrapper.addOnLayoutChangeListener( new OnLayoutChangeListener() {
+			
+			@Override
+			public void onLayoutChange(View v, int left, int top, int right,
+					int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
+				
+				handler.postDelayed(new Runnable(){
+
+					@Override
+					public void run() {
+						tvWrapperHeightActual.setText("Actual Size : " +  rlBoxSizeWrapper.getHeight() / metrics.density + "dp");	
+					}
+					
+				} , 500);
+			}
+		});
 		
 		spTextViewGravity = (Spinner)view.findViewById(R.id.spTextViewGravity);
 		
@@ -79,7 +99,11 @@ public class BoxModelFragment extends Fragment implements OnSeekBarChangeListene
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		// Apply the adapter to the spinner
 		spTextViewGravity.setAdapter(adapter);
+		
+		
 		spTextViewGravity.setOnItemSelectedListener(new MySpinnerListener() );
+		spTextViewGravity.setSelection(1);
+		
 	}
 
 	@Override
@@ -162,14 +186,6 @@ public class BoxModelFragment extends Fragment implements OnSeekBarChangeListene
 		
 	}
 
-	@Override
-	public void onLayoutChange(View v, int left, int top, int right,
-			int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
-		
-		tvWrapperHeightActual.setText("Actual Size : " +  rlBoxSizeWrapper.getHeight() / metrics.density + "dp");
-		
-	}
-
 	
 	private class MySpinnerListener implements OnItemSelectedListener
 	{
@@ -177,8 +193,10 @@ public class BoxModelFragment extends Fragment implements OnSeekBarChangeListene
 		public void onItemSelected(AdapterView<?> arg0, View v, int position,
 				long id) {
 			
+			
 			if( arg0 == spTextViewGravity )
 			{
+				
 				LayoutParams lp = (LayoutParams) tvBoxSizeText.getLayoutParams() ;
 				
 				if( position == 0 )
