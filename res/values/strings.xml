@@ -7,4 +7,12 @@
         <item>Box Sizes</item>
         <item>Box Model</item>
     </string-array>
+    
+        <string-array name="gravity_options">
+        <item>Left + Top</item>
+        <item>Left + vCenter</item>
+        <item>Center in Parent</item>
+        <item>Right + vCenter</item>
+        <item>Right + Top</item>
+    </string-array>
 </resources>

@@ -16,7 +16,6 @@
     
     <style name="demoBlockWrapperSize">
         <item name="android:background">@android:color/holo_purple</item>
-        <item name="android:gravity">center</item>
         <item name="android:layout_marginTop">5dp</item>
     </style>
     
