@@ -36,6 +36,10 @@ public class MainActivity extends Activity implements OnNavigationListener {
 		{
 			ft.replace(android.R.id.content, BoxSizingFragment.create() );
 		}
+		else if( itemPosition == 2)
+		{
+			ft.replace(android.R.id.content, BoxModelFragment.create() );
+		}
 		
 		ft.commit() ;
 		return true;

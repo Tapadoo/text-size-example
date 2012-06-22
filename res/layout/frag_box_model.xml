@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <TextView android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wrapper Height" />
+        
+        <SeekBar android:id="@+id/sbWrapperHeight" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="300"/>
+        <TextView android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView Layout Gravity"/>
+        <SeekBar android:id="@+id/sbLayoutGravity" android:layout_width="match_parent" android:layout_height="wrap_content" android:progress="1" android:max="2"/>
+        <TextView android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView Layout Margin"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <SeekBar android:id="@+id/sbTvLayoutMargin" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:max="50" />
+            <TextView android:id="@+id/tvLayoutMarginVal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0dp" android:layout_weight="0" android:textStyle="bold" android:textColor="@android:color/white" android:layout_margin="5dp" />
+        </LinearLayout>
+        <TextView android:id="@+id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView Padding"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <SeekBar android:id="@+id/sbTvLayoutPadding" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:max="50" />
+            <TextView android:id="@+id/tvLayoutPaddingVal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0dp" android:layout_weight="0" android:textStyle="bold" android:textColor="@android:color/white" android:layout_margin="5dp" />
+        </LinearLayout>
+        
+        
+        <LinearLayout android:id="@+id/llBoxSizeWrapper" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/demoBlockWrapperSize" android:orientation="vertical">
+            
+            <TextView android:id="@+id/tvBoxSizeText" style="@style/demoBlockSize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="14dp Text" android:textSize="14dp" android:layout_marginTop="0dp"/>
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+</ScrollView>
