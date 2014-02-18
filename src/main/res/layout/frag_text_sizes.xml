@@ -11,14 +11,20 @@
         >
         
         <TextView  android:layout_width="wrap_content" android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:text="Static" android:textAppearance="?android:attr/textAppearanceLarge"/>
-        
-        <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="Un spec" />
+        <TextView  android:layout_width="wrap_content" android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:text="(box heights 48dp)" android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="Device Default (size not set)" />
         <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="10sp" android:textSize="10sp" />
         <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="12sp" android:textSize="12sp" />
         <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="14sp" android:textSize="14sp" />
         <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="16sp" android:textSize="16sp" />
         <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="18sp" android:textSize="18sp" />
         <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="20sp" android:textSize="20sp" />
+        <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="22sp" android:textSize="22sp" />
+        <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="24sp" android:textSize="24sp" />
+        <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="26sp" android:textSize="26sp" />
+        <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="28sp" android:textSize="28sp" />
+        <TextView style="@style/demoBlock"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="30sp" android:textSize="30sp" />
         
         
         <TextView style="@style/demoBlockDp"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="10dp" android:textSize="10dp" />
@@ -27,6 +33,11 @@
         <TextView style="@style/demoBlockDp"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="16dp" android:textSize="16dp" />
         <TextView style="@style/demoBlockDp"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="18dp" android:textSize="18dp" />
         <TextView style="@style/demoBlockDp"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="20dp" android:textSize="20dp" />
+        <TextView style="@style/demoBlockDp"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="22dp" android:textSize="22dp" />
+        <TextView style="@style/demoBlockDp"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="24dp" android:textSize="24dp" />
+        <TextView style="@style/demoBlockDp"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="26dp" android:textSize="26dp" />
+        <TextView style="@style/demoBlockDp"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="28dp" android:textSize="28dp" />
+        <TextView style="@style/demoBlockDp"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="30dp" android:textSize="30dp" />
         
         <TextView style="@style/demoBlockPt"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="10pt" android:textSize="10pt" />
         <TextView style="@style/demoBlockPt"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="12pt" android:textSize="12pt" />
@@ -34,6 +45,9 @@
         <TextView style="@style/demoBlockPt"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="16pt" android:textSize="16pt" />
         <TextView style="@style/demoBlockPt"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="18pt" android:textSize="18pt" />
         <TextView style="@style/demoBlockPt"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="20pt" android:textSize="20pt" />
+        <TextView style="@style/demoBlockPt"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="22pt" android:textSize="22pt" />
+        <TextView style="@style/demoBlockPt"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="24pt" android:textSize="24pt" />
+        <TextView style="@style/demoBlockPt"  android:layout_width="fill_parent" android:layout_height="48dp" android:text="26pt" android:textSize="26pt" />
         
         <TextView  style="@style/demoBlockSize" android:layout_width="100dp" android:layout_height="48dp"  android:text="width 100dp"/>
         <TextView  style="@style/demoBlockSize" android:layout_width="100px" android:layout_height="48dp"  android:text="width 100px"/>
@@ -48,16 +62,18 @@
         <TextView  style="@style/demoBlockSize" android:layout_width="320px" android:layout_height="48dp" android:text="width 320px"/>
         <TextView android:id="@+id/mpText" style="@style/demoBlockSize" android:layout_width="match_parent" android:layout_height="48dp" android:text="match_parent"/>
         <TextView  android:layout_width="wrap_content" android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:text="Interactive" android:textAppearance="?android:attr/textAppearanceLarge"/>
-        
+
+        <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Adjust the slider to change the text size"/>
+
         <LinearLayout
             android:id="@+id/llCustomWrapper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:orientation="vertical">
-            <TextView android:id="@+id/tvCustom"  style="@style/demoBlock" android:layout_width="match_parent" android:layout_height="48dp" android:textSize="10sp"  android:text="10 sp"/>
-            <SeekBar android:id="@+id/sbAdjustCustom" android:layout_width="match_parent" android:progress="10" android:max="80" android:layout_gravity="center" android:layout_height="wrap_content"/>
-        </LinearLayout>
-        <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Adjust the slider to change the text size"/>
-        
+            <SeekBar android:id="@+id/sbAdjustCustom" android:layout_width="match_parent" android:progress="10" android:max="100" android:layout_gravity="center" android:layout_height="wrap_content"/>
+
+            <TextView android:id="@+id/tvCustom"  style="@style/demoBlock" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:textSize="10sp"  android:text="10 sp"/>
+            </LinearLayout>
+
          
         
     </LinearLayout>

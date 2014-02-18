@@ -28,7 +28,10 @@ public class TextSizingFragment extends Fragment {
 		return inflater.inflate(R.layout.frag_text_sizes, container , false);
 	}
 
-
+    public int pxToDp(int px)
+    {
+        return (int) (px / getResources().getDisplayMetrics().density);
+    }
 
 	/** Called when the activity is first created. */
     @Override
@@ -53,7 +56,7 @@ public class TextSizingFragment extends Fragment {
 				DisplayMetrics metrics = new DisplayMetrics();
 				getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
-				mpText.setText( "match_parent " + mpText.getWidth() +  "px" + " - " + ( (1.0/metrics.density) * mpText.getWidth() ) + "dp" );
+				mpText.setText( "match_parent " + mpText.getWidth() +  "px" + " - " + pxToDp( mpText.getWidth() ) + "dp" );
 			}
 		});
         
@@ -87,12 +90,12 @@ public class TextSizingFragment extends Fragment {
 				}
 				
 				tvCustom = (TextView) getActivity().getLayoutInflater().inflate(R.layout.dyn_text_view_ex, llCustomWrapper, false );
-				tvCustom.setHeight((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 48, metrics));
+				//tvCustom.setHeight((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 48, metrics));
 				
 				tvCustom.setTextSize(TypedValue.COMPLEX_UNIT_SP, progress);
 				tvCustom.setText(progress +" sp");
 				
-				llCustomWrapper.addView(tvCustom,0);
+				llCustomWrapper.addView(tvCustom,1);
 				 llCustomWrapper.requestLayout();
 				tvCustom.postInvalidate();
 			}

@@ -1,4 +1,5 @@
 bin
+.idea
 tests/bin
 gen
 tests/gen
@@ -6,3 +7,7 @@ tests/gen
 .DS_Store
 tests/reports
 index.html
+.gradle
+*.iml
+build/
+*.DS_Store
